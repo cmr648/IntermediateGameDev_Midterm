@@ -17,7 +17,7 @@ public class Collect_Item : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		Point_Text.text = "goodwill: " + Total_Points;
+		Point_Text.text = "Goodwill: " + Total_Points;
 		
 	}
 
