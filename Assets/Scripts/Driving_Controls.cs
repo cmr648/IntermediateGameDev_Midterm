@@ -10,6 +10,9 @@ public class Driving_Controls : MonoBehaviour {
 	public float Turn_Speed; // creating a variable for the speed of our turning
 	public float Player_Max_Speed; // creating a variable for the max speed we will allow the player to go
 
+	[SerializeField] //creates a seperate unity field similar to when setting things to public
+	float CameraDistance; // creating a unity editor field to measure the distance between our player in the camera
+
 	public GameObject Cam;
 
 	// Use this for initialization
@@ -29,7 +32,8 @@ public class Driving_Controls : MonoBehaviour {
 
 		gameObject.transform.Rotate(0f,Turning_Amount*Turn_Speed*Time.deltaTime,0f); // rotating our plyer game object based on the horizontal axis
 
-		Debug.Log (Vector3.Distance (transform.position, Cam.transform.position));
+		CameraDistance = (Vector3.Distance (transform.position, Cam.transform.position)); // setting our camera distance serialized field to display the distance of the camera to our player
+
 	}
 
 	void FixedUpdate(){ // a void that will function every frame rather than every rendered frame
