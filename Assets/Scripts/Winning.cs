@@ -27,7 +27,7 @@ public class Winning : MonoBehaviour {
 
 
 		if (GetComponent<CountdownTimer> ().Minutes_Left <= 0 && GetComponent<CountdownTimer> ().Seconds_Left <= 0) { // checking to see if the player has completely run out of time
-
+			GetComponent<CountdownTimer>().enabled = false; // disabling our countdown timer to set it to 0
 			Winning_Text.text = Out_Of_Time_String; // setting our winning text to btell when the player has run out of time
 			GetComponent<Driving_Controls>().enabled = false; // turning off our players driving controls
 			Winning_Text.gameObject.SetActive (true); // turning on our winning text gameobject

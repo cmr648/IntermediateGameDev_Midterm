@@ -13,6 +13,7 @@ public class Driving_Controls : MonoBehaviour {
 	[SerializeField] //creates a seperate unity field similar to when setting things to public
 	float CameraDistance; // creating a unity editor field to measure the distance between our player in the camera
 
+
 	public GameObject Cam;
 
 	// Use this for initialization
@@ -38,7 +39,7 @@ public class Driving_Controls : MonoBehaviour {
 
 	void FixedUpdate(){ // a void that will function every frame rather than every rendered frame
 		
-		Debug.Log (Player_Rigid_Body.velocity);
+
 
 	}
 }

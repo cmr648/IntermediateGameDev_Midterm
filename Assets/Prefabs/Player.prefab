@@ -157,7 +157,13 @@ MonoBehaviour:
   Total_Points: 0
   Point_Text: {fileID: 0}
   Point_Decrease: 10
+  Decrease_Time: 2
   Good_Will_Slider: {fileID: 0}
+  Player_Doing_Well: {r: 0, g: 1, b: 0.17241383, a: 0}
+  Player_Doing_Neutral: {r: 1, g: 1, b: 1, a: 0}
+  Player_Doing_Bad: {r: 1, g: 0, b: 0, a: 0}
+  Slider_Fill: {fileID: 0}
+  Slider_Loading: {fileID: 0}
 --- !u!114 &114277502720403468
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -201,7 +207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player_Speed: 50
-  Turn_Speed: 50
+  Turn_Speed: 100
   Player_Max_Speed: 10
   CameraDistance: 0
   Cam: {fileID: 0}

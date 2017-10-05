@@ -1904,11 +1904,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114716338168010812, guid: d86f9ec59a2b841c4aeb28dc60f83fbb,
+    - target: {fileID: 114554065893351404, guid: d86f9ec59a2b841c4aeb28dc60f83fbb,
         type: 2}
-      propertyPath: Cam
+      propertyPath: Timer_Text
       value: 
-      objectReference: {fileID: 1433447104}
+      objectReference: {fileID: 726919701}
+    - target: {fileID: 114277502720403468, guid: d86f9ec59a2b841c4aeb28dc60f83fbb,
+        type: 2}
+      propertyPath: Winning_Text
+      value: 
+      objectReference: {fileID: 32226436}
     - target: {fileID: 114019513418921134, guid: d86f9ec59a2b841c4aeb28dc60f83fbb,
         type: 2}
       propertyPath: Point_Text
@@ -1919,16 +1924,21 @@ Prefab:
       propertyPath: Good_Will_Slider
       value: 
       objectReference: {fileID: 1218202827}
-    - target: {fileID: 114277502720403468, guid: d86f9ec59a2b841c4aeb28dc60f83fbb,
+    - target: {fileID: 114019513418921134, guid: d86f9ec59a2b841c4aeb28dc60f83fbb,
         type: 2}
-      propertyPath: Winning_Text
+      propertyPath: Slider_Fill
       value: 
-      objectReference: {fileID: 32226436}
-    - target: {fileID: 114554065893351404, guid: d86f9ec59a2b841c4aeb28dc60f83fbb,
+      objectReference: {fileID: 934900717}
+    - target: {fileID: 114019513418921134, guid: d86f9ec59a2b841c4aeb28dc60f83fbb,
         type: 2}
-      propertyPath: Timer_Text
+      propertyPath: Slider_Loading
       value: 
-      objectReference: {fileID: 726919701}
+      objectReference: {fileID: 1118138959}
+    - target: {fileID: 114716338168010812, guid: d86f9ec59a2b841c4aeb28dc60f83fbb,
+        type: 2}
+      propertyPath: Cam
+      value: 
+      objectReference: {fileID: 1433447104}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d86f9ec59a2b841c4aeb28dc60f83fbb, type: 2}
   m_IsPrefabParent: 0
