@@ -38,7 +38,7 @@ public class Driving_Controls : MonoBehaviour {
 
 	void FixedUpdate(){ // a void that will function every frame rather than every rendered frame
 		
-
+		Debug.Log (Player_Rigid_Body.velocity);
 
 	}
 }

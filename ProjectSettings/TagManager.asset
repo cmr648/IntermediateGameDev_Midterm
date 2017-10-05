@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Point
   - Win_Trigger
+  - Bad_Driving
+  - Enemy_Car
+  - Menu_Selector
   layers:
   - Default
   - TransparentFX
