@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Main_Menu : MonoBehaviour {
 
@@ -25,8 +26,11 @@ public class Main_Menu : MonoBehaviour {
 	public bool Can_Use_Arrow_Keys; // creating a bool to decide when the player can use arrow keys
 	public bool Can_Show_Selectors; // creating a bool to decide when we can show selectors
 
+
+
 	// Use this for initialization
 	void Start () {
+		
 
 		Menu_Selector_List = GameObject.FindGameObjectsWithTag ("Menu_Selector"); // adding all fo our menu selctors to our menu selector list
 		Current_Selection = 1; // setting our current selction to be equal to 1 at the begginign of our game
@@ -38,6 +42,7 @@ public class Main_Menu : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
 		if (Can_Use_Arrow_Keys == true) { // checking to see if the player can use arrow keys
 			Arrow_Key_Selection (); // implementing our arrow key selection function
 		}

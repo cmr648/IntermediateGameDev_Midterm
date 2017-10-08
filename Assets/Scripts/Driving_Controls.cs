@@ -24,6 +24,7 @@ public class Driving_Controls : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+
 		float Input_Forward = Input.GetAxis ("Vertical"); // getting our vertical axis to move our player forwards
 		float Turning_Amount = Input.GetAxis ("Horizontal"); //getting our horizontal axis to rotate our player object
 

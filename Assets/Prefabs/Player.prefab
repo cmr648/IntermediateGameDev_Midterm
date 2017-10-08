@@ -193,7 +193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Timer_Text: {fileID: 0}
-  Minutes_Left: 1
+  Minutes_Left: 2
   Seconds_Left: 0
 --- !u!114 &114716338168010812
 MonoBehaviour:
