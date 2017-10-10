@@ -177,7 +177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Winning_Text: {fileID: 0}
   Amount_To_Win: 100
-  Win_String: You Win :)
+  Win_String: You Win! Please wait to get your license
   Must_Keep_Playing_String: You didn't have enough goodwill to win :(
   Out_Of_Time_String: You've run out of time :(
   Wait_Before_Scene: 3
