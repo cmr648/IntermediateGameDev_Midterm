@@ -16,7 +16,7 @@ public class Enemy_Movement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		transform.position += Vector3.forward * Enemy_Speed * Time.deltaTime; // moving our enemy forward by time and our enemy speed
+		transform.position += Vector3.right * Enemy_Speed * Time.deltaTime; // moving our enemy forward by time and our enemy speed
 		
 	}
 
