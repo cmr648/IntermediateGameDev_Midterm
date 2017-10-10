@@ -8,6 +8,11 @@ public class Enemy_Movement : MonoBehaviour {
 	public GameObject Enemy_Spawn_Position; // creating a public gameobject to set our enemy spawn position
 	public GameObject Enemy_Trigger; // creating a piblic gameobejct for our enemy trigger
 
+	public bool Forward; // creating public bool references for what direction we want
+	public bool Backward;
+	public bool Left; 
+	public bool Right;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -15,9 +20,26 @@ public class Enemy_Movement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		// moving our object based on the bools we check
+		if(Forward == true){
 
-		transform.position += Vector3.right * Enemy_Speed * Time.deltaTime; // moving our enemy forward by time and our enemy speed
-		
+			transform.position += Vector3.forward * Enemy_Speed * Time.deltaTime; // moving our enemy forward by time and our enemy speed
+		}
+
+		if(Backward == true){
+
+			transform.position += -Vector3.forward * Enemy_Speed * Time.deltaTime; // moving our enemy forward by time and our enemy speed
+		}
+
+		if(Left == true){
+
+			transform.position += -Vector3.right * Enemy_Speed * Time.deltaTime; // moving our enemy forward by time and our enemy speed
+		}
+
+		if(Right == true){
+
+			transform.position += Vector3.right * Enemy_Speed * Time.deltaTime; // moving our enemy forward by time and our enemy speed
+		}
 	}
 
 	void OnTriggerEnter(Collider col){ // checking to see if the enemy has entered any trigger at all
