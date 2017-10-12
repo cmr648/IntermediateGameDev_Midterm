@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 114019513418921134}
   - component: {fileID: 114277502720403468}
   - component: {fileID: 114554065893351404}
+  - component: {fileID: 114324211906128786}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -181,6 +182,19 @@ MonoBehaviour:
   Must_Keep_Playing_String: You didn't have enough goodwill to win :(
   Out_Of_Time_String: You've run out of time :(
   Wait_Before_Scene: 3
+--- !u!114 &114324211906128786
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1242265452396196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9f7dd510125d4cafad67c632bd036ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Wait_Seconds: 2
+  Beginning_Text: {fileID: 0}
 --- !u!114 &114554065893351404
 MonoBehaviour:
   m_ObjectHideFlags: 1
