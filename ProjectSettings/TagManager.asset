@@ -9,6 +9,7 @@ TagManager:
   - Bad_Driving
   - Enemy_Car
   - Menu_Selector
+  - Traffic_Cone
   layers:
   - Default
   - TransparentFX

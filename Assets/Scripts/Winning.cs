@@ -14,11 +14,12 @@ public class Winning : MonoBehaviour {
 
 	public float Wait_Before_Scene; // creating a public variable to decide how long to wait before loading the new scene
 
+	Fader_Script Fade_Out_Now; // creating a reference for our fader script
 
 	// Use this for initialization
 	void Start () {
 		Winning_Text.gameObject.SetActive (false); // setting our winning text gameobject to not be active at the start of the game
-
+		Fade_Out_Now = Camera.main.GetComponent<Fader_Script>(); // assiging our fader script to our reference
 	}
 	
 	// Update is called once per frame
@@ -42,7 +43,10 @@ public class Winning : MonoBehaviour {
 			GetComponent<CountdownTimer>().enabled = false; // disabling our countdown timer to set it to 0
 			if (GetComponent<Collect_Item> ().Total_Points >= Amount_To_Win) { // checking to see if the player has enough points to win
 				Winning_Text.text = Win_String; // setting the winnint text to be our winning string
-				StartCoroutine("Next_Level_Move");
+				//StartCoroutine("Next_Level_Move");
+				//Fade_Out_Now.Can_Fade_Out = true; // setting our fade out to be equal to true
+
+
 
 			} else { // if the player does not have enough points to win
 				Winning_Text.text = Must_Keep_Playing_String; // setting the winning text to be our must keep playing string.
@@ -57,7 +61,8 @@ public class Winning : MonoBehaviour {
 
 	IEnumerator Next_Level_Move(){ // creating an IENumerator to move to our next scene
 		yield return new WaitForSeconds (Wait_Before_Scene); // asking the computer to wait for an amount of seconds before moving to our new scene
-		SceneManager.LoadScene ("Camera_Test"); // loading our new scene
+		//SceneManager.LoadScene ("Camera_Test"); // loading our new scene
+		Fade_Out_Now.Can_Fade_Out = true; // setting our fade out ot be equal to true
 
 	}
 		

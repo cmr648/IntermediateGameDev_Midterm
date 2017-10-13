@@ -26,6 +26,8 @@ public class Collect_Item : MonoBehaviour {
 	public Image Slider_Fill; // creatinga  public gameobject to change the color of the fill of our slider
 	public Image Slider_Loading; // creating a public gameobject for our slider filling up
 
+	public AudioClip Collect_Coin; // creating a public audio clip for when we collect a coin
+
 	// Use this for initialization
 	void Start () {
 		Total_Points = 0; // setting the total points to 0 at the start of a game
@@ -69,6 +71,7 @@ public class Collect_Item : MonoBehaviour {
 		if (col.gameObject.tag == "Point") { // checking to see if the object collided with is tagged as point
 			Destroy (col.gameObject); // destroying the gameobject that is collected
 			Total_Points += Point_Increase; // adding our point increase to ourplayers total points
+			AudioSource.PlayClipAtPoint(Collect_Coin,Camera.main.transform.position); // playing our audio clip for when a coin is collected
 		
 
 		}
@@ -97,6 +100,11 @@ public class Collect_Item : MonoBehaviour {
 		if (col.gameObject.tag == "Enemy_Car") { // checking to see if the player has collided with an enemy car
 			Total_Points -= Point_Increase*2; // subtracting points from our player
 
+
+		}
+
+		if (col.gameObject.tag == "Traffic_Cone") { // checking to see if the player has collided with a traffic cone
+			Total_Points -= Point_Increase /2 ; // subtracting points from our player
 
 		}
 	}

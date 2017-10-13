@@ -26,6 +26,7 @@ public class Main_Menu : MonoBehaviour {
 	public bool Can_Use_Arrow_Keys; // creating a bool to decide when the player can use arrow keys
 	public bool Can_Show_Selectors; // creating a bool to decide when we can show selectors
 
+	Fader_Script Fade_Out_Now; // creating a referecne to our fader script
 
 
 	// Use this for initialization
@@ -38,6 +39,7 @@ public class Main_Menu : MonoBehaviour {
 		Credits_Panel.SetActive(false); // turning our credits panel off
 		Can_Use_Arrow_Keys = true; // setting this to allow our player to use arrow keys
 		Can_Show_Selectors = true; // setting this to allow to show selctors
+		Fade_Out_Now = GetComponent<Fader_Script>(); // setting our fade out now script reference
 	}
 	
 	// Update is called once per frame
@@ -110,7 +112,8 @@ public class Main_Menu : MonoBehaviour {
 
 	void Enter_Selection(){ // creating a function to decide what will happen when the player presses the enter key
 		if (Input.GetKeyDown (KeyCode.Return) && Current_Selection == 1) { // checking to see if we are on selection 1
-			SceneManager.LoadScene ("Control_Test"); // loading the main game scene
+		//	SceneManager.LoadScene ("Control_Test"); // loading the main game scene
+			Fade_Out_Now.Can_Fade_Out = true; // setting our fader to fade out
 
 		}
 
