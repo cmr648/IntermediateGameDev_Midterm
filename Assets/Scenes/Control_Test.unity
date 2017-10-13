@@ -2913,7 +2913,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -5063,7 +5063,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -5672,21 +5672,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114324211906128786, guid: d86f9ec59a2b841c4aeb28dc60f83fbb,
+    - target: {fileID: 114554065893351404, guid: d86f9ec59a2b841c4aeb28dc60f83fbb,
         type: 2}
-      propertyPath: Beginning_Text
+      propertyPath: Timer_Text
       value: 
-      objectReference: {fileID: 1596449936}
-    - target: {fileID: 114324211906128786, guid: d86f9ec59a2b841c4aeb28dc60f83fbb,
+      objectReference: {fileID: 726919701}
+    - target: {fileID: 114277502720403468, guid: d86f9ec59a2b841c4aeb28dc60f83fbb,
         type: 2}
-      propertyPath: Main_Camera
+      propertyPath: Winning_Text
       value: 
-      objectReference: {fileID: 1433447104}
-    - target: {fileID: 114716338168010812, guid: d86f9ec59a2b841c4aeb28dc60f83fbb,
-        type: 2}
-      propertyPath: Cam
-      value: 
-      objectReference: {fileID: 1433447104}
+      objectReference: {fileID: 32226436}
     - target: {fileID: 114019513418921134, guid: d86f9ec59a2b841c4aeb28dc60f83fbb,
         type: 2}
       propertyPath: Point_Text
@@ -5707,21 +5702,21 @@ Prefab:
       propertyPath: Slider_Loading
       value: 
       objectReference: {fileID: 1118138959}
-    - target: {fileID: 114277502720403468, guid: d86f9ec59a2b841c4aeb28dc60f83fbb,
+    - target: {fileID: 114716338168010812, guid: d86f9ec59a2b841c4aeb28dc60f83fbb,
         type: 2}
-      propertyPath: Winning_Text
+      propertyPath: Cam
       value: 
-      objectReference: {fileID: 32226436}
-    - target: {fileID: 114554065893351404, guid: d86f9ec59a2b841c4aeb28dc60f83fbb,
+      objectReference: {fileID: 1433447104}
+    - target: {fileID: 114324211906128786, guid: d86f9ec59a2b841c4aeb28dc60f83fbb,
         type: 2}
-      propertyPath: Timer_Text
+      propertyPath: Beginning_Text
       value: 
-      objectReference: {fileID: 726919701}
-    - target: {fileID: 114277502720403468, guid: d86f9ec59a2b841c4aeb28dc60f83fbb,
+      objectReference: {fileID: 1596449936}
+    - target: {fileID: 114324211906128786, guid: d86f9ec59a2b841c4aeb28dc60f83fbb,
         type: 2}
-      propertyPath: Amount_To_Win
-      value: 10
-      objectReference: {fileID: 0}
+      propertyPath: Main_Camera
+      value: 
+      objectReference: {fileID: 1433447104}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d86f9ec59a2b841c4aeb28dc60f83fbb, type: 2}
   m_IsPrefabParent: 0
@@ -6676,9 +6671,9 @@ MonoBehaviour:
   Next_Level: Camera_Test
   Fade_In_Fader: {fileID: 1200556299}
   Fade_Out_Fader: {fileID: 739292938}
-  No_Alpha: {r: 0, g: 0, b: 0, a: 0}
-  All_Alpha: {r: 0, g: 0, b: 0, a: 1}
-  Time_To_Fade: 2
+  No_Alpha: {r: 1, g: 1, b: 1, a: 0}
+  All_Alpha: {r: 1, g: 1, b: 1, a: 1}
+  Time_To_Fade: 50
   Can_Fade_Out: 0
 --- !u!4 &1439481931 stripped
 Transform:

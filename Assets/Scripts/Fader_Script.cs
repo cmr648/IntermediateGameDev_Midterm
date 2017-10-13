@@ -15,6 +15,8 @@ public class Fader_Script : MonoBehaviour {
 
 	public bool Can_Fade_Out; // setting a bool to see if the player can fade out
 
+	float Fade_Out_Time = 0; // creating a final float for our fade out time
+	float Fade_In_Time = 0; // creating a final float for our fade out time
 
 	// Use this for initialization
 	void Start () {
@@ -26,17 +28,27 @@ public class Fader_Script : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Fade_In_Fader.color = Color.Lerp (Fade_In_Fader.color, No_Alpha, Time.deltaTime*Time_To_Fade); // fading in our fade in fader 
+
+		if (Fade_In_Time < 1) { // checking to see if fade in time is less than 1
+
+			Fade_In_Time += Time.deltaTime / Time_To_Fade; // adding time to our fade in value
+		}
+
+		Fade_In_Fader.color = Color.Lerp (Fade_In_Fader.color, No_Alpha, Fade_In_Time); // fading in our fade in fader 
 
 		if (Can_Fade_Out == true) { // checking to see if the scene can fade out
-
 			Fade_Out (); // fading out of our scene and changing scnes
 		}
 
 	}
 
 	 void Fade_Out(){
-		Fade_Out_Fader.color = Color.Lerp (Fade_Out_Fader.color, All_Alpha, Time.deltaTime * Time_To_Fade); // fading out our fade out color
+
+		if (Fade_Out_Time < 1) { // checking to see if our fade out time is less than 1
+			Fade_Out_Time += Time.deltaTime / Time_To_Fade;
+		}
+
+		Fade_Out_Fader.color = Color.Lerp (Fade_Out_Fader.color, All_Alpha, Fade_Out_Time); // fading out our fade out color
 
 		if (Fade_Out_Fader.color == All_Alpha) { // checking to see if the color of fade out matcches
 			SceneManager.LoadScene (Next_Level); // loading our next level

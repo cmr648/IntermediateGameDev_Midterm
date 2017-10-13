@@ -43,7 +43,7 @@ public class Winning : MonoBehaviour {
 			GetComponent<CountdownTimer>().enabled = false; // disabling our countdown timer to set it to 0
 			if (GetComponent<Collect_Item> ().Total_Points >= Amount_To_Win) { // checking to see if the player has enough points to win
 				Winning_Text.text = Win_String; // setting the winnint text to be our winning string
-				//StartCoroutine("Next_Level_Move");
+				StartCoroutine("Next_Level_Move");
 				//Fade_Out_Now.Can_Fade_Out = true; // setting our fade out to be equal to true
 
 
