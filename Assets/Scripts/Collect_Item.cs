@@ -28,6 +28,11 @@ public class Collect_Item : MonoBehaviour {
 
 	public AudioClip Collect_Coin; // creating a public audio clip for when we collect a coin
 
+	public Text Coin_Percent_Text; // text that describes the percent of coins the player has left
+	public float Total_Coin_Amount; // text that will collect the total coin amount
+	public float Current_Coin_Amount; // text that will collect the current coin amount the player has
+	public float Coin_Percentage; // the current coin percentage
+
 	// Use this for initialization
 	void Start () {
 		Total_Points = 0; // setting the total points to 0 at the start of a game
@@ -40,10 +45,16 @@ public class Collect_Item : MonoBehaviour {
 		Good_Will_Slider.minValue = -Good_Will_Slider.maxValue; // setting the minimum value of our slider to be the opposite of what the maxium value is
 
 
+		Total_Coin_Amount = GameObject.FindGameObjectsWithTag ("Point").Length; // getting the amount of coins total
+		Current_Coin_Amount = 0; // setting the current coin amount to 0
+		Coin_Percentage = 0; // setting the current coin percentage to 0 
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
+		Coin_Percent_Text.text = "Coins Collected: " + string.Format("{0:0}",Coin_Percentage) + "%"; // setting our coin percent text
 
 		Color_Of_Slider ();
 
@@ -72,6 +83,9 @@ public class Collect_Item : MonoBehaviour {
 			Destroy (col.gameObject); // destroying the gameobject that is collected
 			Total_Points += Point_Increase; // adding our point increase to ourplayers total points
 			AudioSource.PlayClipAtPoint(Collect_Coin,Camera.main.transform.position); // playing our audio clip for when a coin is collected
+			Total_Coin_Amount -= 1; // subtracting a coin from our total
+			Current_Coin_Amount += 1; // adding a coin to our current collected
+			Coin_Percentage = (Current_Coin_Amount/Total_Coin_Amount) * 100; // calculating the percent
 		
 
 		}
