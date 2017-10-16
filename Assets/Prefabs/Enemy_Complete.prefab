@@ -98,8 +98,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1614759711390960}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.91851, y: -2.874383, z: -5.545907}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 7.1, y: -2.874383, z: -77}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4007059193199422}
@@ -107,7 +107,7 @@ Transform:
   - {fileID: 4777054885455184}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!4 &4777054885455184
 Transform:
   m_ObjectHideFlags: 1
@@ -128,7 +128,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1697146060687812}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.2475529, y: 3.489383, z: 3.995907}
+  m_LocalPosition: {x: 1.25, y: 3.489383, z: 19.66}
   m_LocalScale: {x: 2.5253537, y: 2.51868, z: 1}
   m_Children: []
   m_Father: {fileID: 4271613427819442}
@@ -225,7 +225,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!65 &65272415405672504
 BoxCollider:
@@ -262,6 +262,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 011534d629ae541fd84acd66435e270e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemy_Speed: 4
+  Enemy_Speed: 7
   Enemy_Spawn_Position: {fileID: 1253171254465614}
   Enemy_Trigger: {fileID: 1697146060687812}
+  Forward: 0
+  Backward: 0
+  Left: 1
+  Right: 0

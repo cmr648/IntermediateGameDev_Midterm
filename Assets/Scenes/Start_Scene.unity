@@ -1275,7 +1275,7 @@ MonoBehaviour:
   Fade_Out_Fader: {fileID: 539990575}
   No_Alpha: {r: 1, g: 1, b: 1, a: 0}
   All_Alpha: {r: 1, g: 1, b: 1, a: 1}
-  Time_To_Fade: 50
+  Time_To_Fade: 10
   Can_Fade_Out: 0
 --- !u!1 &1467870037
 GameObject:

@@ -45,7 +45,7 @@ public class Fader_Script : MonoBehaviour {
 	 void Fade_Out(){
 
 		if (Fade_Out_Time < 1) { // checking to see if our fade out time is less than 1
-			Fade_Out_Time += Time.deltaTime / Time_To_Fade;
+			Fade_Out_Time += Time.deltaTime / Time_To_Fade; // adding a fraction of time over time to our fade out itmes
 		}
 
 		Fade_Out_Fader.color = Color.Lerp (Fade_Out_Fader.color, All_Alpha, Fade_Out_Time); // fading out our fade out color

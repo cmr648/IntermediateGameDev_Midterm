@@ -10,6 +10,7 @@ TagManager:
   - Enemy_Car
   - Menu_Selector
   - Traffic_Cone
+  - Invisible_Wall
   layers:
   - Default
   - TransparentFX
