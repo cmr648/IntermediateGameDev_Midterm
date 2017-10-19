@@ -36,6 +36,10 @@ public class Driving_Controls : MonoBehaviour {
 
 		CameraDistance = (Vector3.Distance (transform.position, Cam.transform.position)); // setting our camera distance serialized field to display the distance of the camera to our player
 
+		if (Input_Forward < 0) { // checking to see if the the player is going backwards
+
+			Turning_Amount = -Turning_Amount; // making our turning move the opposite way
+		}
 	}
 
 	void FixedUpdate(){ // a void that will function every frame rather than every rendered frame

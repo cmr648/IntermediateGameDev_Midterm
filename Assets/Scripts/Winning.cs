@@ -16,10 +16,12 @@ public class Winning : MonoBehaviour {
 
 	Fader_Script Fade_Out_Now; // creating a reference for our fader script
 
+
 	// Use this for initialization
 	void Start () {
 		Winning_Text.gameObject.SetActive (false); // setting our winning text gameobject to not be active at the start of the game
 		Fade_Out_Now = Camera.main.GetComponent<Fader_Script>(); // assiging our fader script to our reference
+
 	}
 	
 	// Update is called once per frame

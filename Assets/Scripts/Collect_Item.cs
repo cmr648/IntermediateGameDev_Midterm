@@ -33,6 +33,8 @@ public class Collect_Item : MonoBehaviour {
 	public float Current_Coin_Amount; // text that will collect the current coin amount the player has
 	public float Coin_Percentage; // the current coin percentage
 
+	public float Enemy_Damage; // creating a  public float for enemy damage
+
 	// Use this for initialization
 	void Start () {
 		Total_Points = 0; // setting the total points to 0 at the start of a game
@@ -83,9 +85,10 @@ public class Collect_Item : MonoBehaviour {
 			Destroy (col.gameObject); // destroying the gameobject that is collected
 			Total_Points += Point_Increase; // adding our point increase to ourplayers total points
 			AudioSource.PlayClipAtPoint(Collect_Coin,Camera.main.transform.position); // playing our audio clip for when a coin is collected
-			Total_Coin_Amount -= 1; // subtracting a coin from our total
+			// Total_Coin_Amount -= 1; // subtracting a coin from our total
 			Current_Coin_Amount += 1; // adding a coin to our current collected
 			Coin_Percentage = (Current_Coin_Amount/Total_Coin_Amount) * 100; // calculating the percent
+
 		
 
 		}
@@ -112,8 +115,8 @@ public class Collect_Item : MonoBehaviour {
 	void OnCollisionEnter(Collision col){ // checking to see if the player ahs collided witha  solid object
 
 		if (col.gameObject.tag == "Enemy_Car") { // checking to see if the player has collided with an enemy car
-			Total_Points -= Point_Increase*2; // subtracting points from our player
-
+		//	Total_Points -= Point_Increase*2; // subtracting points from our player
+			Total_Points -= Enemy_Damage; // subtracting points from the player
 
 		}
 
